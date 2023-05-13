@@ -46,7 +46,6 @@ int main(int argc, char *argv[]){
   int64_t LUT_query_1=1;
   int64_t LUT_query_2=2;
   int64_t LUT_query_3=3;
-  int64_t LUT_num=0;
 
   //encrypt the LUT query
   cout << "Encrypt and save your query..." << flush;
@@ -55,6 +54,7 @@ int main(int argc, char *argv[]){
     query1.push_back(LUT_query_1);
     query2.push_back(LUT_query_2);
     query3.push_back(LUT_query_3);
+    int64_t LUT_num=(generator()%100+1); // generate random noise for simulate
     num.push_back(LUT_num);
   }
   query1.resize(slot_count);

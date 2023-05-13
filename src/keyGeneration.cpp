@@ -9,7 +9,6 @@ int main(int argc, char *argv[]){
     parms.set_coeff_modulus(CoeffModulus::Create(8192, {50,30,30,50}));
     //parms.set_coeff_modulus(CoeffModulus::BFVDefault(16384));
     parms.set_plain_modulus(786433);//1769473 //319489 //114689 //786433
-    //parms.set_plain_modulus(1769473);
 
     SEALContext context(parms);
     print_parameters(context);

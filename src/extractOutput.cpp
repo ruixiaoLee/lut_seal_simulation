@@ -12,7 +12,7 @@ void show_memory_usage(pid_t pid){
 }
 
 int64_t sqrtN(int64_t a, int64_t b){
-  int64_t n=0; // a开 b次方 向上取整
+  int64_t n=0;
   while(pow(b,n)<a){
     n++;
   }

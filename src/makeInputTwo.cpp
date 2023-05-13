@@ -48,7 +48,6 @@ int main(int argc, char *argv[]){
   cout<<"Get query!: ";
   int64_t LUT_query_1=2;
   int64_t LUT_query_2=4;
-  int64_t LUT_num=2;
 
   //encrypt the LUT query
   cout << "Encrypt and save your query..." << flush;

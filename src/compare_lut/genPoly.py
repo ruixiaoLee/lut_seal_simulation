@@ -11,7 +11,7 @@ def sigmoid(x):
 def swish(x):
   return x * sigmoid(x)
 
-x_value = np.arange(-3.0, 3.0, 0.01)
+x_value = np.arange(-3.0, 3.0, 0.01) # generate the random numbers within the range
 y_value = swish(x_value)
 print(x_value)
 print(y_value)
