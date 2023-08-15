@@ -35,6 +35,9 @@ src --- demo.hpp
       | ckks_6_swish.cpp
       | ckks_8_swish.cpp
 
+      (For bit-wise FHE)
+      | eval-function.cpp (from https://github.com/openfheorg/openfhe-development/blob/main/src/binfhe/examples/eval-function.cpp)
+
       - randomInput --- test_normal.txt (test dataset)
                      |_ train_normal.txt (training dataset)
       - Table (store LUTs)
