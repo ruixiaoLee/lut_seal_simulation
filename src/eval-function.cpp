@@ -75,7 +75,11 @@ int main() {
     for (int i = 0; i < p; i++) {
         auto ct1 = cc.Encrypt(sk, i % p, FRESH, p);
 
+        auto startWhole=chrono::high_resolution_clock::now();
         auto ct_cube = cc.EvalFunc(ct1, lut);
+        auto endWhole=chrono::high_resolution_clock::now();
+        chrono::duration<double> diffWhole = endWhole-startWhole;
+        cout << "runtime is: " << diffWhole.count() << "s" << endl;
 
         LWEPlaintext result;
 
