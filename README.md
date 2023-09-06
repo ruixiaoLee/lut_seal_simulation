@@ -1,17 +1,18 @@
 # lut_seal_simulation
 Revise the `CMakeList.txt` to compile the code you need.
+When you make LUT use the source code `makeTable.cpp`, please only available the part of code you need.
 ### Construction of codes
 ```
 src --- demo.hpp
       | keyGeneration.cpp
       | makeTable.cpp
-      | checkResult.cpp
+      | checkResult.cpp(Step6)
 
       (For single-input:)
-      | makeInput.cpp
-      | searchInput.cpp
-      | makeQuery.cpp
-      | extractOutput.cpp
+      | makeInput.cpp(Step1)
+      | searchInput.cpp(Step2)
+      | makeQuery.cpp(Step3)
+      | extractOutput.cpp(Step4-5)
 
       (For two-input:)
       | makeInputTwo.cpp
@@ -36,7 +37,8 @@ src --- demo.hpp
       | ckks_8_swish.cpp
 
       (For bit-wise FHE)
-      | eval-function.cpp (from https://github.com/openfheorg/openfhe-development/blob/main/src/binfhe/examples/eval-function.cpp)
+      | naivebitwiseLUT --- bitwiselut.cpp
+                         |_ CMakeList.txt
 
       - randomInput --- test_normal.txt (test dataset)
                      |_ train_normal.txt (training dataset)
@@ -48,7 +50,42 @@ src --- demo.hpp
                      |_ lut_ptxt_idas.py (generate plaintext LUT by idas)
 ```
 ## Single-Input Function Evaluation with LUT
-
+### Running
+After compiling the codes and made LUTs
+```
+bin/keyGeneration
+bin/makeTable
+bin/makeInput
+bin/searchInput
+bin/makeQuery
+bin/extractOutput
+bin/checkResult
+```
 ## Multi-Input Function Evaluation with LUT
-
+For two-input Function
+```
+bin/keyGeneration
+bin/makeTable
+bin/makeInputTwo
+bin/searchInputTwo
+bin/makeQueryTwo
+bin/extractOutputTwo
+bin/checkResult
+```
+For three-input Function
+```
+bin/keyGeneration
+bin/makeTable
+bin/makeInputThree
+bin/searchInputThree
+bin/makeQueryThree
+bin/extractOutputThree
+bin/checkResult
+```
 ## Comparison with Polynomial Approximation
+To check the average abs/per error of polynomial approximation method, run one of the code you need.
+```
+bin/ckks_2(4/6/8)_relu(swish)
+```
+## Comparison with Naive Bit-Wise LUT
+Check the directory `naivebitwiseLUT`.
