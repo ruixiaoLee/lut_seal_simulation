@@ -1,6 +1,13 @@
 # lut_seal_simulation
-Revise the `CMakeList.txt` to compile the code you need.
-When you make LUT use the source code `makeTable.cpp`, please only available the part of code you need.
+Our program is only tested on 64-bit platform.<br>
+Revise the `CMakeList.txt` to compile the code you need.<br>
+When you make LUT use the source code `makeTable.cpp`, please only available the part of code you need.<br>
+
+## Prerequisites
+Microsoft SEAL version 4.0.0, OpenFHE 1.0.3, CMake and OpenMP is needed.
+[Microsoft/SEAL](https://github.com/microsoft/SEAL)
+[OpenFHE](https://github.com/openfheorg/openfhe-development)
+
 ### Construction of codes
 ```
 src --- demo.hpp
