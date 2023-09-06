@@ -83,7 +83,7 @@ bin/extractOutputThree
 bin/checkResult
 ```
 ## Comparison with Polynomial Approximation
-To check the average abs/per error of polynomial approximation method, run one of the code you need.
+To check the average abs/per error and runtime of polynomial approximation method, run one of the code you need.
 ```
 bin/ckks_2(4/6/8)_relu(swish)
 ```
