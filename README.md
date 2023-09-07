@@ -8,6 +8,48 @@ Microsoft SEAL version 4.0.0, OpenFHE 1.0.3, CMake and OpenMP is needed.
 [Microsoft/SEAL](https://github.com/microsoft/SEAL)
 [OpenFHE](https://github.com/openfheorg/openfhe-development)
 
+## Running
+
+### Single-Input Function Evaluation with LUT
+For one-input functions
+```
+bin/keyGeneration
+bin/makeTable
+bin/makeInput
+bin/searchInput
+bin/makeQuery
+bin/extractOutput
+bin/checkResult
+```
+## Multi-Input Function Evaluation with LUT
+For two-input functions
+```
+bin/keyGeneration
+bin/makeTable
+bin/makeInputTwo
+bin/searchInputTwo
+bin/makeQueryTwo
+bin/extractOutputTwo
+bin/checkResult
+```
+For three-input functions
+```
+bin/keyGeneration
+bin/makeTable
+bin/makeInputThree
+bin/searchInputThree
+bin/makeQueryThree
+bin/extractOutputThree
+bin/checkResult
+```
+## Comparison with Polynomial Approximation
+To check the average abs/per error and runtime of polynomial approximation method, run one of the code you need.
+```
+bin/ckks_2(4/6/8)_relu(swish)
+```
+## Comparison with Naive Bit-Wise LUT
+Check the directory `naivebitwiseLUT`.
+
 ### Construction of codes
 ```
 src --- demo.hpp
@@ -56,43 +98,3 @@ src --- demo.hpp
                      |_ lut_ptxt_eds.py (generate plaintext LUT by eds)
                      |_ lut_ptxt_idas.py (generate plaintext LUT by idas)
 ```
-## Single-Input Function Evaluation with LUT
-### Running
-After compiling the codes and made LUTs
-```
-bin/keyGeneration
-bin/makeTable
-bin/makeInput
-bin/searchInput
-bin/makeQuery
-bin/extractOutput
-bin/checkResult
-```
-## Multi-Input Function Evaluation with LUT
-For two-input Function
-```
-bin/keyGeneration
-bin/makeTable
-bin/makeInputTwo
-bin/searchInputTwo
-bin/makeQueryTwo
-bin/extractOutputTwo
-bin/checkResult
-```
-For three-input Function
-```
-bin/keyGeneration
-bin/makeTable
-bin/makeInputThree
-bin/searchInputThree
-bin/makeQueryThree
-bin/extractOutputThree
-bin/checkResult
-```
-## Comparison with Polynomial Approximation
-To check the average abs/per error and runtime of polynomial approximation method, run one of the code you need.
-```
-bin/ckks_2(4/6/8)_relu(swish)
-```
-## Comparison with Naive Bit-Wise LUT
-Check the directory `naivebitwiseLUT`.
