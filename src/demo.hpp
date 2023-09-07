@@ -28,9 +28,9 @@
 using namespace std;
 using namespace seal;
 
-#define TABLE_SIZE 4096
-#define TABLE_SIZE_OUT 4096
-#define NF 1
+#define TABLE_SIZE 4096 // number of input LUT data points
+#define TABLE_SIZE_OUT 4096 // number of output LUT data points
+#define NF 1 // number of threads
 
 //12bit 4096
 //14bit 16384

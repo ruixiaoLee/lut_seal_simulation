@@ -1,7 +1,5 @@
 # lut_seal_simulation
 Our program is only tested on 64-bit platform.<br>
-Revise the `CMakeList.txt` to compile the code you need.<br>
-When you make LUT use the source code `makeTable.cpp`, please only available the part of code you need.<br>
 
 ## Prerequisites
 Microsoft SEAL version 4.0.0, OpenFHE 1.0.3, CMake and OpenMP is needed.
@@ -9,12 +7,23 @@ Microsoft SEAL version 4.0.0, OpenFHE 1.0.3, CMake and OpenMP is needed.
 [OpenFHE](https://github.com/openfheorg/openfhe-development)
 
 ## Running
+Revise the `CMakeList.txt` to compile the code you need.<br>
+When you make LUT use the source code `makeTable.cpp`, please only available the part of code you need.<br>
+```
+cmake .
+make
+```
+If you don't have directory `~/Table/two` and `~/Table/three`, please make them before you make LUTs for two and three-input functions evaluation.<br>
+Before running LUT processing, you have to generate keys and LUTs.<br>
+```
+bin/keyGeneration
+bin/makeTable
+```
+Note that you need to change the number of data points and threads in `demo.hpp` after you make LUTs.<br>
 
 ### Single-Input Function Evaluation with LUT
 For one-input functions, you need to revise the LUT path in `searchInput.cpp` and `extractOutput.cpp`.
 ```
-bin/keyGeneration
-bin/makeTable
 bin/makeInput
 bin/searchInput
 bin/makeQuery
@@ -24,8 +33,6 @@ bin/checkResult
 ## Multi-Input Function Evaluation with LUT
 For two-input functions, you need to revise the LUT path in `searchInputTwo.cpp` and `extractOutputTwo.cpp`.
 ```
-bin/keyGeneration
-bin/makeTable
 bin/makeInputTwo
 bin/searchInputTwo
 bin/makeQueryTwo
@@ -34,8 +41,6 @@ bin/checkResult
 ```
 For three-input functions, you need to revise the LUT path in `searchInputThree.cpp` and `extractOutputThree.cpp`.
 ```
-bin/keyGeneration
-bin/makeTable
 bin/makeInputThree
 bin/searchInputThree
 bin/makeQueryThree
