@@ -60,7 +60,7 @@ int main(int argc, char *argv[]){
 
   vector<Ciphertext> fun_tab_out;
   ifstream readtable;
-  readtable.open("Table/OutputTable_12bit");
+  readtable.open("Table/OutputTable_12bit"); /* Please change the LUT path you need */
   for(int w = 0; w < row_count ; w++) {
     Ciphertext tep;
     tep.load(context, readtable);

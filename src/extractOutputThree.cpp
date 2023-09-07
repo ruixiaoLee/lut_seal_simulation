@@ -12,7 +12,7 @@ void show_memory_usage(pid_t pid){
 }
 
 int64_t sqrtN(int64_t a, int64_t b){
-  int64_t n=0; 
+  int64_t n=0;
   while(pow(b,n)<a){
     n++;
   }
@@ -61,7 +61,7 @@ int main(int argc, char *argv[]){
     //Read OutputTable from file
     vector<Ciphertext> fun_tab_out;
     ifstream readtable;
-    readtable.open("Table/three/OutputTable_6bit");
+    readtable.open("Table/three/OutputTable_6bit"); /* Please change the LUT path you need */
     for(int w = 0; w < row_count ; w++) {
       Ciphertext tep;
       tep.load(context, readtable);

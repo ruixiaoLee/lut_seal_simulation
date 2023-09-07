@@ -52,7 +52,7 @@ int main(int argc, char *argv[]){
   //Read InputTable from file
   vector<Ciphertext> fun_tab1;
   ifstream readtable1;
-  readtable1.open("Table/two/InputTable_12bit");
+  readtable1.open("Table/two/InputTable_12bit"); /* Please change the LUT path you need */
   for(int w = 0; w < row_count ; w++) {
     Ciphertext temp1;
     temp1.load(context, readtable1);
@@ -61,7 +61,7 @@ int main(int argc, char *argv[]){
   //Read InputTable from file
   vector<Ciphertext> fun_tab2;
   ifstream readtable2;
-  readtable2.open("Table/two/InputTable_12bit");
+  readtable2.open("Table/two/InputTable_12bit"); /* Please change the LUT path you need */
   for(int w = 0; w < row_count ; w++) {
     Ciphertext temp2;
     temp2.load(context, readtable2);

@@ -11,7 +11,7 @@ Microsoft SEAL version 4.0.0, OpenFHE 1.0.3, CMake and OpenMP is needed.
 ## Running
 
 ### Single-Input Function Evaluation with LUT
-For one-input functions
+For one-input functions, you need to revise the LUT path in `searchInput.cpp` and `extractOutput.cpp`.
 ```
 bin/keyGeneration
 bin/makeTable
