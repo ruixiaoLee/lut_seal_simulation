@@ -22,7 +22,7 @@ bin/extractOutput
 bin/checkResult
 ```
 ## Multi-Input Function Evaluation with LUT
-For two-input functions
+For two-input functions, you need to revise the LUT path in `searchInputTwo.cpp` and `extractOutputTwo.cpp`.
 ```
 bin/keyGeneration
 bin/makeTable
@@ -32,7 +32,7 @@ bin/makeQueryTwo
 bin/extractOutputTwo
 bin/checkResult
 ```
-For three-input functions
+For three-input functions, you need to revise the LUT path in `searchInputThree.cpp` and `extractOutputThree.cpp`.
 ```
 bin/keyGeneration
 bin/makeTable
