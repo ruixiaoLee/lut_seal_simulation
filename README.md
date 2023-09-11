@@ -19,7 +19,7 @@ Before running LUT processing, you have to generate keys and LUTs.<br>
 bin/keyGeneration
 bin/makeTable
 ```
-Note that you need to change the number of data points and threads in `demo.hpp` after you make LUTs.<br>
+Note that you need to change the number of data points and threads in `demo.hpp` after you make LUTs, and compile the codes again.<br>
 
 ### Single-Input Function Evaluation with LUT
 For one-input functions, you need to revise the LUT path in `searchInput.cpp` and `extractOutput.cpp`.
