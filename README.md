@@ -1,16 +1,16 @@
 # lut_seal_simulation
-Our program is only tested on 64-bit platform.<br>
+Our program is only tested on 64-bit platforms.<br>
 This project is based on the paper:<br>
 R. Li, H. Yamana: "Privacy-Preserving Function Evaluation using Lookup Tables with Word-Wise FHE," IEICE Trans. on Fundamentals of Electronics, Communications and Computer Sciences, vol.E107-A, No.8, pp.1-15,2024. doi:10.1587/transfun.2023EAP1114 (in printing)<br>
 
 ## Prerequisites
-Microsoft SEAL version 4.0.0, OpenFHE 1.0.3, CMake and OpenMP is needed.
-[Microsoft/SEAL](https://github.com/microsoft/SEAL)
-[OpenFHE](https://github.com/openfheorg/openfhe-development)
+Microsoft SEAL version 4.0.0, OpenFHE 1.0.3, CMake, and OpenMP are needed.<br>
+[Microsoft/SEAL](https://github.com/microsoft/SEAL)<br>
+[OpenFHE](https://github.com/openfheorg/openfhe-development)<br>
 
 ## Running
 Revise the `CMakeList.txt` to compile the code you need.<br>
-When you make LUT use the source code `makeTable.cpp`, please only available the part of code you need.<br>
+When you make LUT use the source code `makeTable.cpp`. Please only available the part of the code you need.<br>
 ```
 cmake .
 make
@@ -50,7 +50,7 @@ bin/extractOutputThree
 bin/checkResult
 ```
 ## Comparison with Polynomial Approximation
-To check the average abs/per error and runtime of polynomial approximation method, run one of the code you need.
+To check the average abs/per error and runtime of the polynomial approximation method, run one of the codes you need.
 ```
 bin/ckks_2(4/6/8)_relu(swish)
 ```
@@ -103,5 +103,5 @@ src --- demo.hpp
       - compare_lut --- comError.py (compute the accuracy of LUT)
                      |_ genPoly.py (generate polynomial approximation)
                      |_ lut_ptxt_eds.py (generate plaintext LUT by eds)
-                     |_ lut_ptxt_idas.py (generate plaintext LUT by idas)
+                     |_ lut_ptxt_idas.py (generate plaintext LUT by ideas)
 ```
