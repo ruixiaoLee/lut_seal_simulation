@@ -1,5 +1,6 @@
 # lut_seal_simulation
 Our program is only tested on 64-bit platform.<br>
+This project is based on the paper: R. Li, H. Yamana: "Privacy-Preserving Function Evaluation using Lookup Tables with Word-Wise FHE," IEICE Trans. on Fundamentals of Electronics, Communications and Computer Sciences, vol.E107-A, No.8, pp.1-15,2024. doi:10.1587/transfun.2023EAP1114<br>
 
 ## Prerequisites
 Microsoft SEAL version 4.0.0, OpenFHE 1.0.3, CMake and OpenMP is needed.
